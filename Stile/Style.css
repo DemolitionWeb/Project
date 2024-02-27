@@ -151,7 +151,7 @@ ul {
 	transition: all 0.3 ease;
 }
 
-.btnTop {
+/*.btnTop {
 	font-size: 16px;
 	font-weight: 500;
 	padding: 12px 35px;
@@ -163,7 +163,7 @@ ul {
 	white-space: nowrap;
 	transition: all 0.3 ease;
 	margin-top: 20px;
-}
+}*/
 
 z .btn:hover {
 	transform: scale(1.05);
