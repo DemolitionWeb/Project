@@ -194,9 +194,9 @@ ul {
 	transition-duration: .3s;
 }
 
-/* Whatsapp */
+/* TikTok */
 .containerFour:hover {
-	background-color: #128C7E;
+	background-color: #c00c24;
 	transition-duration: .3s;
 }
 
@@ -672,6 +672,14 @@ h3.my-profession {
 	font-size: 16px;
 	text-align: justify;
 	color: var(--text-black-700);
+}
+
+.Pex {
+	text-align: center;
+	justify-content: center;
+	font-size: 18px;
+	color: var(--text-black-900);
+
 }
 
 /* SERVICES */
