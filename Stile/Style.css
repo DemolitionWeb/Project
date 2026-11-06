@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 
 * {
@@ -28,7 +28,7 @@ body.dark {
 body {
 	line-height: 1.5;
 	font-size: 16px;
-	font-family: 'Poppins' sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 ::before,
@@ -149,7 +149,7 @@ ul {
 	display: inline-block;
 	border: none;
 	white-space: nowrap;
-	transition: all 0.3 ease;
+	transition: all 0.3s ease;
 }
 
 .card {
@@ -239,11 +239,11 @@ ul {
 	display: inline-block;
 	border: none;
 	white-space: nowrap;
-	transition: all 0.3 ease;
+	transition: all 0.3s ease;
 	margin-top: 20px;
 }*/
 
-z .btn:hover {
+.btn:hover {
 	transform: scale(1.05);
 }
 
@@ -955,4 +955,134 @@ h3.my-profession {
 		flex: 0 0 100%;
 		max-width: 100%;
 	}
+}
+
+/* ===== AGGIUNTE 2026: pulsanti e schede progetto ===== */
+
+.home .home-info .btn,
+.portfolio .portfolio-links .btn {
+	margin: 10px 10px 0 0;
+}
+
+.btn-outline {
+	background: transparent;
+	color: var(--skin-color);
+	box-shadow: inset 0 0 0 2px var(--skin-color);
+}
+
+.btn-small {
+	font-size: 14px;
+	padding: 8px 20px;
+}
+
+.portfolio .portfolio-item-big {
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+
+.portfolio .portfolio-item-inner {
+	cursor: default;
+	background: var(--bg-black-100);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.portfolio .portfolio-img {
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img {
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+
+.portfolio .portfolio-item-inner:hover .portfolio-img img {
+	transform: scale(1.03);
+}
+
+.portfolio .portfolio-info {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.portfolio .portfolio-info h3 {
+	font-size: 22px;
+	color: var(--text-black-900);
+	margin-bottom: 8px;
+}
+
+.portfolio .portfolio-info p {
+	font-size: 15px;
+	color: var(--text-black-700);
+	margin-bottom: 15px;
+}
+
+.portfolio .portfolio-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-bottom: 20px;
+}
+
+.portfolio .portfolio-tags li {
+	font-size: 12px;
+	font-weight: 500;
+	padding: 3px 10px;
+	border-radius: 20px;
+	background: var(--bg-black-50);
+	color: var(--text-black-900);
+}
+
+.portfolio .portfolio-links {
+	margin-top: auto;
+}
+
+.portfolio .portfolio-heading {
+	margin-top: 20px;
+}
+
+.about .personal-info a:not(.btn),
+.contact .contact-info-item a {
+	color: inherit;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+@media (max-width:767px) {
+	.portfolio .portfolio-item-big {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+@media (min-width:992px) {
+	.contact .contact-info-item {
+		flex: 0 0 33.33%;
+		max-width: 33.33%;
+	}
+}
+
+.aside .nav li a {
+	text-transform: none;
+}
+
+/* Sfondo della pagina coerente con il tema (toglie la striscia bianca in alto a sinistra) */
+body {
+	background: var(--bg-black-100);
+}
+
+@media (max-width:991px) {
+	.home .home-info {
+		margin-bottom: 60px;
+	}
+}
+
+.contact .contact-info-item .icon .fab {
+	font-size: 25px;
+	color: var(--skin-color);
 }

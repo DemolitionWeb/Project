@@ -1,9 +1,13 @@
-var typed = new Typed(".typing", {
-    strings: ["Web developer", "Coder", "Gamer", "Neo CSS coder"],
-    typedSpeed: 100,
-    BackSpeed: 60,
-    loop: true
-})
+/* Se la libreria Typed non si carica, il resto del sito funziona lo stesso */
+if (window.Typed) {
+    new Typed(".typing", {
+        strings: ["Web developer junior", "sviluppatore JavaScript", "creatore di CareerKick"],
+        typeSpeed: 70,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+    })
+}
 
 /* ASIDE */
 
@@ -66,6 +70,29 @@ document.querySelector(".hire-me").addEventListener("click", function () {
     removeBackSection();
     addBackSection(sectionIndex);
 })
+/* LINK INTERNI (es. "Guarda i progetti") */
+document.querySelectorAll(".section-link").forEach((link) => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        showSection(this);
+        updateNav(this);
+        removeBackSection();
+    })
+})
+
+/* MODULO CONTATTI: apre il programma di posta con il messaggio pronto */
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const dati = new FormData(contactForm);
+        const oggetto = dati.get("oggetto") || "Contatto dal portfolio";
+        const corpo = dati.get("messaggio") + "\n\n" + dati.get("nome") + " - " + dati.get("email");
+        window.location.href = "mailto:dominicitommaso2@gmail.com?subject=" +
+            encodeURIComponent(oggetto) + "&body=" + encodeURIComponent(corpo);
+    })
+}
+
 const navTogglerBtn = document.querySelector(".nav-toggler"),
     aside = document.querySelector(".aside");
 navTogglerBtn.addEventListener("click", () => {
